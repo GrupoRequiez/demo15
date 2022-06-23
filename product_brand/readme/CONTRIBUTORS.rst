@@ -9,4 +9,10 @@
 * Daniel Campos <danielcampos@avanzosc.es>
 * `Tecnativa <https://www.tecnativa.com>`_
 
-  * David Vidal <david.vidal@tecnativa.com>
+  * David Vidal
+  * João Marques
+
+* Kaushal Prajapati <kbprajapati@live.com>
+* `Jarsa <https://www.jarsa.com>`_
+
+  * Alan Ramos
