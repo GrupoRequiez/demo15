@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_location_form_view" model="ir.ui.view">
+        <field name="name">product.location.form.view</field>
+        <field name="model">product.location</field>
+        <field name="arch" type="xml">
+            <form string="Product locations">
+              <sheet>
+                <group>
+                  <group>
+                    <field name="active"/>
+                    <field name="name"/>
+                  </group>
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_location_tree_view" model="ir.ui.view">
+        <field name="name">product.location.tree.view</field>
+        <field name="model">product.location</field>
+        <field name="arch" type="xml">
+            <tree string="Locations">
+              <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_location_action" model="ir.actions.act_window">
+        <field name="name">Product locations</field>
+        <field name="res_model">product.location</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="product_locations.product_location_tree_view"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to set a new Location.</p>
+        </field>
+    </record>
+    <menuitem id="menu_product_location_admin" name="Product location Admin" sequence="20" parent="stock.menu_stock_warehouse_mgmt"/>
+    <menuitem id="menu_product_location" name="Product location" sequence="20" action="product_location_action" parent="product_locations.menu_product_location_admin"/>
+
+    <!-- ###### -->
+    <record id="product_location_detail_view" model="ir.ui.view">
+        <field name="name">product.location.detail.view</field>
+        <field name="model">product.location.detail</field>
+        <field name="arch" type="xml">
+            <form string="Product locations">
+              <header>
+                <button name="action_validate" type="object" string="Validate" attrs="{'invisible': [('state', 'in', ['done','cancel'])]}"/>
+                <button name="action_cancel" type="object" string="Cancel" attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                <button name="action_draft" type="object" string="Change to draft" attrs="{'invisible': [('state', 'in', ['done','draft'])]}"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"/>
+              </header>
+              <sheet>
+                <group>
+                  <group>
+                    <field name="tracking_type" invisible="1"/>
+                    <field name="internal_location_id" attrs="{'readonly': [('state', '=', 'cancel')]}"/>
+                    <field name="product_id" attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>
+                    <field name="location_id" attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>
+                    <field name="lot_id"
+                      domain="[('product_id', '=', product_id)]"
+                      attrs="{'readonly': [('state', 'in', ['done','cancel'])], 'invisible': [('tracking_type','!=','lot')], 'required': [('tracking_type','=','lot')]}"
+                      />
+                    <field name="product_qty" attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>
+                    <field name="comments"/>
+                  </group>
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- search view -->
+    <record id="view_product_location_detail_search" model="ir.ui.view">
+        <field name="name">view.product.location.detail.search</field>
+        <field name="model">product.location.detail</field>
+        <field name="arch" type="xml">
+          <search string="Location Details">
+            <field name="product_id"/>
+            <field name="internal_location_id"/>
+            <field name="location_id"/>
+            <field name="lot_id"/>
+            <filter string="Draft"
+                    name="draft_filter"
+                    domain="[('state', '=', 'draft')]"/>
+            <filter string="Done"
+                    name="done_filter"
+                    domain="[('state', '=', 'done')]"/>
+            <separator/>
+            <group expand="0" string="Group By">
+                <filter string="Product" name="product" domain="[]" context="{'group_by': 'product_id'}"/>
+                <filter string="Lot/serial number" name="lot" domain="[]" context="{'group_by': 'lot_id'}"/>
+                <filter string="Parent location" name="parent_location" domain="[]" context="{'group_by': 'location_id'}"/>
+                <filter string="State" name="state" domain="[]" context="{'group_by': 'state'}"/>
+            </group>
+          </search>
+        </field>
+    </record>
+    <!-- search view -->
+
+    <record id="product_location_detail_tree_view" model="ir.ui.view">
+        <field name="name">product.location.detail.tree.view</field>
+        <field name="model">product.location.detail</field>
+        <field name="arch" type="xml">
+            <tree string="Locations detail">
+              <field name="internal_location_id"/>
+              <field name="product_id"/>
+              <field name="location_id"/>
+              <field name="lot_id"/>
+              <field name="product_qty"/>
+              <field name="state"/>
+              <field name="comments"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_location_detail_action" model="ir.actions.act_window">
+        <field name="name">Product locations detail</field>
+        <field name="res_model">product.location.detail</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="product_locations.product_location_detail_tree_view"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to set a new Location detail.</p>
+        </field>
+    </record>
+    <menuitem id="menu_product_location_detail" name="Product location detail" sequence="30" action="product_location_detail_action" parent="product_locations.menu_product_location_admin"/>
+
+    <record id="action_validate" model="ir.actions.server">
+        <field name="name">Validate</field>
+        <field name="model_id" ref="product_locations.model_product_location_detail"/>
+        <field name="binding_model_id" ref="product_locations.model_product_location_detail"/>
+        <field name="binding_view_types">form,list</field>
+        <field name="state">code</field>
+        <field name="code">
+        if records:
+            for r in records:
+                r.action_validate()
+        </field>
+    </record>
+
+
+
+
+</odoo>

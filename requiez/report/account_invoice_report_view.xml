@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_invoice_region_report_search" model="ir.ui.view">
+        <field name="inherit_id" ref="product_brand.view_account_invoice_report_search"/>
+        <field name="model">account.invoice.report</field>
+        <field name="arch" type="xml">
+            <filter name="brand" position="after">
+                <filter string="Region" name="partner_region" context="{'group_by':'partner_region'}"/>
+                <filter string="Invoice brand" name="invoice_brand" context="{'group_by':'invoice_brand'}"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

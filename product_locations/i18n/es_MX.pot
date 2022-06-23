@@ -1,0 +1,342 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_locations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-29 15:46+0000\n"
+"PO-Revision-Date: 2022-04-29 15:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__active
+msgid "Active"
+msgstr "Activa"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_stock_backorder_confirmation
+msgid "Backorder Confirmation"
+msgstr "Confirmación de entrega parcial"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_detail_view
+#: model_terms:ir.ui.view,arch_db:product_locations.upload_location_detail_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_locations
+#: model:ir.model.fields.selection,name:product_locations.selection__product_location_detail__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_detail_view
+msgid "Change to draft"
+msgstr "Cambiar a borrador"
+
+#. module: product_locations
+#: model_terms:ir.actions.act_window,help:product_locations.product_location_detail_action
+msgid "Click to set a new Location detail."
+msgstr "Clic para crear"
+
+#. module: product_locations
+#: model_terms:ir.actions.act_window,help:product_locations.product_location_action
+msgid "Click to set a new Location."
+msgstr "Clic para crear"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__comments
+msgid "Comments"
+msgstr "Comentarios"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.upload_location_detail_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__create_uid
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__create_uid
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__create_date
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__create_date
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_product_location
+#: model:ir.model,name:product_locations.model_product_location_detail
+msgid "Custom product locations"
+msgstr "Ubicación de producto"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_mrp_immediate_production__display_name
+#: model:ir.model.fields,field_description:product_locations.field_product_location__display_name
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__display_name
+#: model:ir.model.fields,field_description:product_locations.field_stock_backorder_confirmation__display_name
+#: model:ir.model.fields,field_description:product_locations.field_stock_immediate_transfer__display_name
+#: model:ir.model.fields,field_description:product_locations.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: product_locations
+#: model:ir.model.fields.selection,name:product_locations.selection__product_location_detail__state__done
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: product_locations
+#: model:ir.model.fields.selection,name:product_locations.selection__product_location_detail__state__draft
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: product_locations
+#: model:ir.model.fields,help:product_locations.field_product_location_detail__tracking_type
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Asegure la trazabilidad de un producto almacenable en su almacén."
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__data_file
+msgid "File"
+msgstr "Archivo"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__getted
+msgid "Getted"
+msgstr "Generado"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_mrp_immediate_production__id
+#: model:ir.model.fields,field_description:product_locations.field_product_location__id
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__id
+#: model:ir.model.fields,field_description:product_locations.field_stock_backorder_confirmation__id
+#: model:ir.model.fields,field_description:product_locations.field_stock_immediate_transfer__id
+#: model:ir.model.fields,field_description:product_locations.field_stock_move_line__id
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_mrp_immediate_production
+msgid "Immediate Production"
+msgstr "Producción inmediata"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_stock_immediate_transfer
+msgid "Immediate Transfer"
+msgstr "Transferencia inmediata"
+
+#. module: product_locations
+#: model:res.groups,name:product_locations.internal_locations_group
+msgid "Internal location admin"
+msgstr "Admin Ubicaciones internas"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_stock_move_line__internal_locations
+msgid "Internal locations"
+msgstr "Ubicaciones internas"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_mrp_immediate_production____last_update
+#: model:ir.model.fields,field_description:product_locations.field_product_location____last_update
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail____last_update
+#: model:ir.model.fields,field_description:product_locations.field_stock_backorder_confirmation____last_update
+#: model:ir.model.fields,field_description:product_locations.field_stock_immediate_transfer____last_update
+#: model:ir.model.fields,field_description:product_locations.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__write_uid
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__write_uid
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__write_date
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__write_date
+#: model:ir.model.fields,field_description:product_locations.field_upload_location_detail__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Location Details"
+msgstr "Detalles de ubicación"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__internal_location_id
+msgid "Location name"
+msgstr "Ubicación Interna"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_tree_view
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#. module: product_locations
+#: model:ir.actions.server,name:product_locations.action_show_locations_assigned
+msgid "Locations assigned"
+msgstr "Ubicaciones asignadas"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_detail_tree_view
+msgid "Locations detail"
+msgstr "Detalles de Ubicación"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__lot_id
+msgid "Lot"
+msgstr "Lote/Número de serie"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Lot/serial number"
+msgstr "Lot/Número de serie"
+
+#. module: product_locations
+#: model:ir.actions.server,name:product_locations.action_show_lots_assigned
+msgid "Lots assigned"
+msgstr "Lotes asignados"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_upload_location_detail
+msgid "Mass reference load of location details"
+msgstr "Carga masiva de ubicaciones"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Parent location"
+msgstr "Ubicación Gral."
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__product_id
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "Product"
+msgstr "Producto"
+
+#. module: product_locations
+#: model:ir.model,name:product_locations.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de producto (Stock Move Line)"
+
+#. module: product_locations
+#: model:ir.ui.menu,name:product_locations.menu_product_location
+msgid "Product location"
+msgstr "Ubicación de producto"
+
+#. module: product_locations
+#: model:ir.ui.menu,name:product_locations.menu_product_location_admin
+msgid "Product location Admin"
+msgstr "Admin Ubicación de producto"
+
+#. module: product_locations
+#: model:ir.ui.menu,name:product_locations.menu_product_location_detail
+msgid "Product location detail"
+msgstr "Detalles de ubicación"
+
+#. module: product_locations
+#: model:ir.actions.act_window,name:product_locations.product_location_action
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_detail_view
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_form_view
+msgid "Product locations"
+msgstr "Ubicaciones de producto"
+
+#. module: product_locations
+#: model:ir.actions.act_window,name:product_locations.product_location_detail_action
+msgid "Product locations detail"
+msgstr "Detalles de ubicación"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.view_product_location_detail_search
+msgid "State"
+msgstr "Estado"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: product_locations
+#: code:addons/product_locations/models/.ipynb_checkpoints/product_location-checkpoint.py:0
+#: code:addons/product_locations/models/.ipynb_checkpoints/product_location-checkpoint.py:0
+#: code:addons/product_locations/models/product_location.py:0
+#: code:addons/product_locations/models/product_location.py:0
+#, python-format
+msgid "The available stock is not enough for this record %s %s"
+msgstr "La existencia no es sufuciente para este registro %s %s"
+
+#. module: product_locations
+#: model:ir.model.constraint,message:product_locations.constraint_product_location_name_unique
+msgid "The location name must be unique"
+msgstr "El nombre de ubicación debe ser único"
+
+#. module: product_locations
+#: model:ir.model.fields,field_description:product_locations.field_product_location_detail__tracking_type
+msgid "Tracking"
+msgstr "Seguimiento"
+
+#. module: product_locations
+#: model:ir.actions.act_window,name:product_locations.action_upload_location_detail
+#: model:ir.ui.menu,name:product_locations.menu_location_detail
+msgid "Upload Location detail"
+msgstr "Carga de ubicaciones"
+
+#. module: product_locations
+#: model_terms:ir.ui.view,arch_db:product_locations.upload_location_detail_view
+msgid "Upload tracking reference"
+msgstr "Carga de ubicaciones "
+
+#. module: product_locations
+#: model:ir.actions.server,name:product_locations.action_validate
+#: model_terms:ir.ui.view,arch_db:product_locations.product_location_detail_view
+msgid "Validate"
+msgstr "Validar"
+
+#. module: product_locations
+#: code:addons/product_locations/models/.ipynb_checkpoints/product_location-checkpoint.py:0
+#: code:addons/product_locations/models/product_location.py:0
+#, python-format
+msgid "You cannot delete a validated record. You must cancel it first."
+msgstr "No puedes eliminar un regsitro validado. Primero debe ser cancelado"

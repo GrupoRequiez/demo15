@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record model="res.groups" id="internal_locations_group">
+    <field name="name">Internal location admin</field>
+  </record>
+
+</odoo>

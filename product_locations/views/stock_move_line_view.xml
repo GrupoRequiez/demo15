@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_move_line_internal_location_view" model="ir.ui.view">
+      <field name="name">stock.move.line.internal.location.view</field>
+      <field name="model">stock.move.line</field>
+      <field name="inherit_id" ref="stock.view_move_line_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='lot_id']" position="after">
+          <field name="internal_locations"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="action_show_locations_assigned" model="ir.actions.server">
+        <field name="name">Locations assigned</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_view_types">form</field>
+        <field name="groups_id" eval="[(6, 0, [ref('product_locations.internal_locations_group') ])]"/>
+        <field name="state">code</field>
+        <field name="code">
+        if record:
+            data=''
+            for line in record.move_line_ids_without_package:
+                data+='%s %s\n'%(line.product_id.default_code,line.internal_locations)
+            raise Warning(data)
+        </field>
+    </record>
+
+    <record id="action_show_lots_assigned" model="ir.actions.server">
+        <field name="name">Lots assigned</field>
+        <field name="model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_view_types">form</field>
+        <field name="groups_id" eval="[(6, 0, [ref('product_locations.internal_locations_group') ])]"/>
+        <field name="state">code</field>
+        <field name="code">
+        if record:
+            data=''
+            for line in record.move_line_ids_without_package:
+                if line.product_id.tracking == 'lot':
+                    data+='%s --> %s --> %s\n'%(line.product_id.default_code,line.lot_id.name,line.lot_id.id)
+            raise Warning(data)
+        </field>
+    </record>
+</odoo>

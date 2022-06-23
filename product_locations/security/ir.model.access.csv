@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_locations,access_product_locations,model_product_location,product_locations.internal_locations_group,1,1,1,1
+access_product_locations_detail,access_product_locations_detail,model_product_location_detail,product_locations.internal_locations_group,1,1,1,1
+access_upload_location_detail,access_upload_location_detail,model_upload_location_detail,product_locations.internal_locations_group,1,1,1,1
